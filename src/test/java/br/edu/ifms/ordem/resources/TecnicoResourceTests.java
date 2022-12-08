@@ -67,7 +67,7 @@ public class TecnicoResourceTests {
 		when(service.findById(idInexistente)).thenThrow(ResourceNotFoundException.class);
 		
 		//Update
-		//when(service.update(eq(idExistente), any())).thenReturn(tecnicoDTO);
+		when(service.update(eq(idExistente), any())).thenReturn(tecnicoDTO);
 		when(service.update(eq(idInexistente), any())).thenThrow(ResourceNotFoundException.class);
 		
 		//Insert
